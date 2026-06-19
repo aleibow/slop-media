@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>slop.media</title>
+<meta name="description" content="slop.media — Producing 100% grade-A certified slop." />
+<meta property="og:title" content="slop.media" />
+<meta property="og:description" content="Producing 100% grade-A certified slop." />
+<meta property="og:type" content="website" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&display=swap" rel="stylesheet" />
+<style>
+  :root {
+    --cream: #f6ecd8;
+    --bg: #000000;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  html, body {
+    height: 100%;
+    background: var(--bg);
+    font-family: "Poppins", system-ui, sans-serif;
+  }
+
+  body {
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: clamp(28px, 5vh, 52px);
+    text-align: center;
+    padding: 6vw;
+  }
+
+  .logo {
+    display: block;
+    width: min(70vw, 760px);
+    height: auto;
+    user-select: none;
+  }
+
+  .tagline {
+    color: rgba(246, 236, 216, 0.82);
+    font-weight: 600;
+    font-size: clamp(13px, 2.4vw, 20px);
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+  }
+
+  .contact {
+    display: inline-block;
+    padding: 14px 34px;
+    font-family: inherit;
+    font-weight: 700;
+    font-size: clamp(13px, 2vw, 16px);
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: var(--cream);
+    background: transparent;
+    border: 1.5px solid rgba(246, 236, 216, 0.5);
+    border-radius: 2px;
+    transition: color 0.2s ease, background 0.2s ease, border-color 0.2s ease;
+  }
+  .contact:hover {
+    color: #000000;
+    background: var(--cream);
+    border-color: var(--cream);
+  }
+  .contact:focus-visible {
+    outline: 2px solid var(--cream);
+    outline-offset: 3px;
+  }
+</style>
+</head>
+<body>
+  <img class="logo" src="logo.png" alt="slop" />
+
+  <p class="tagline">Producing 100% certified slop.</p>
+
+  <a class="contact" href="mailto:alex@slop.media?subject=Hello%20from%20slop.media">Contact</a>
+</body>
+</html>
