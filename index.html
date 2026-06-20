@@ -31,19 +31,38 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: clamp(28px, 5vh, 52px);
+    gap: clamp(14px, 2.6vh, 28px);
     text-align: center;
     padding: 6vw;
   }
 
+  .logo-wrap {
+    position: relative;
+    line-height: 0;
+    width: min(70vw, 760px);
+  }
   .logo {
     display: block;
-    width: min(70vw, 760px);
-    height: auto;
+    width: 100%;
+    /* the wordmark sits in the middle band of a tall image with lots of black
+       padding above/below — crop to that band so it hugs the tagline */
+    aspect-ratio: 1672 / 470;
+    object-fit: cover;
+    object-position: center 50%;
     user-select: none;
-    /* the rainbow trail sits on the left of the image, so nudge left to
-       optically center the "slop" lettering rather than the whole graphic */
+    /* nudge left to optically center the lettering */
     transform: translateX(-2%);
+  }
+  .tm {
+    position: absolute;
+    top: 20%;
+    left: 89.5%;
+    color: var(--cream);
+    font-weight: 700;
+    font-size: clamp(11px, 1.7vw, 22px);
+    line-height: 1;
+    pointer-events: none;
+    text-shadow: 0 0 6px rgba(0, 0, 0, 0.55);
   }
 
   .tagline {
@@ -81,7 +100,10 @@
 </style>
 </head>
 <body>
-  <img class="logo" src="logo2.png" alt="slop" />
+  <div class="logo-wrap">
+    <img class="logo" src="logo2.png" alt="slopaganda" />
+    <span class="tm" aria-hidden="true">™</span>
+  </div>
 
   <p class="tagline">Producing grade-A certified slop</p>
 
