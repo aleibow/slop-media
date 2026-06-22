@@ -38,12 +38,15 @@
 
   .logo {
     display: block;
-    width: min(70vw, 760px);
-    height: auto;
+    width: min(74vw, 860px);
+    /* the wordmark sits in the middle band of a tall image with lots of black
+       padding above/below — crop to that band so it hugs the tagline */
+    aspect-ratio: 1672 / 500;
+    object-fit: cover;
+    object-position: center 51%;
     user-select: none;
-    /* nudge left to optically center the "slop" lettering rather than the
-       whole graphic (the rainbow trail sits on the left of the image) */
-    transform: translateX(-5%);
+    /* nudge left to optically center the lettering */
+    transform: translateX(-7%);
   }
 
   .tagline {
@@ -81,7 +84,7 @@
 </style>
 </head>
 <body>
-  <img class="logo" src="logo.png" alt="slop" />
+  <img class="logo" src="slopland.png" alt="slopland" />
 
   <p class="tagline">Producing grade-A certified slop</p>
 
